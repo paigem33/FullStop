@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    height:100vh;
+    color: #3a3e42;
+    background-color: #f4e1e3;
+}
+.h-100 {
+    background-color: #f4e1e3;
+}
+.AppForm .AppFormLeft h2{
+    font-size: 35px;
+}
+
+form {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.AppForm .AppFormLeft input:focus{
+    border-color: #ced4da;
+}
+.AppForm .AppFormLeft input::placeholder{
+   font-size: 15px;
+}
+.AppForm .AppFormLeft i{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.AppForm .AppFormLeft a{
+    color: #3a3e42 ;
+}
+.AppForm .AppFormLeft button{
+    background: linear-gradient(to right, #ee4a4b, #ed4a69);
+    border-radius: 30px;
+}
+.AppForm .AppFormLeft p span{
+  color: #007bff;
+}
+.AppForm .AppFormRight{
+    background: linear-gradient(to right, #ee4a4b, #ed4a69);
+    height: 450px;
+    border-radius: 0 15px 15px 0;
+}
+
+.AppForm .AppFormRight h2{
+    z-index: 1;
+}
+
+.AppForm .AppFormRight p{
+    z-index: 1;
+}
+button {
+    transition: .3s;
+}
+button:hover {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
