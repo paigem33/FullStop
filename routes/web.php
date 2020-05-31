@@ -13,14 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// view to return when not logged in 
 Route::get('/', function () {
     return view('welcome');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
+// route to view once logging in
 Route::get('home', function () {
     return view('user/partials/home');
 })->middleware('auth');

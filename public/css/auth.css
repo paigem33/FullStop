@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+
+/* home page */
+.navbar-collapse {
+    flex-basis: unset;
+}
+
+
+/* login / register */
 *{
     padding: 0;
     margin: 0;
