@@ -31,8 +31,8 @@
                                 <li>Someday is not a fucking day of the week.</li>
                             </ul>
                             <div class="d-flex justify-content-start mb-2">
-                                <button class="btn shadow border-0 py-2 text-uppercase mr-2" style="width: 150px;">View all</button>
-                                <button class="btn shadow border-0 py-2 text-uppercase" style="width: 150px;">Add New</button>
+                                <a href="{{route('reminder.index')}}"><button class="btn shadow border-0 py-2 text-uppercase mr-2" style="width: 150px;">View all</button></a>
+                                <a href="{{route('reminder.create')}}"><button class="btn shadow border-0 py-2 text-uppercase" style="width: 150px;">Add New</button></a>
                             </div>
                         </div>
                     </div>

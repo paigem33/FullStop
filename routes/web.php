@@ -24,3 +24,9 @@ Auth::routes();
 Route::get('home', function () {
     return view('user/partials/home');
 })->middleware('auth');
+
+
+Route::group(['middleware' => 'auth'], function()
+{
+    Route::resource('reminder', 'RemindersController');
+});

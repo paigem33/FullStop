@@ -54,7 +54,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/">
+                        <a class="nav-link" href="{{route('reminder.index')}}">
                             <span style="font-size: 25px;" class="mdi mdi-chat-alert-outline"></span>
                             <p class="ml-2 text-capitalize" style="font-size: 18px;">Reminders</p>
                         </a>
