@@ -1,9 +1,52 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
 
 /* home page */
+.navbar {
+    background: linear-gradient(to right, #ee4a4b, #ed4a69);
+}
+.navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link { 
+    color: #fff;
+}
+.navbar-light .navbar-brand:hover, .navbar-light .navbar-nav .nav-link:hover {
+    color: #fff;
+}
 .navbar-collapse {
     flex-basis: unset;
 }
+.jumbotron {
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 56px);
+}
+main .row {
+    max-width: 1000px;
+    margin: auto;
+    align-items: center;
+}
+.welcome-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.welcome-card button {
+    background: linear-gradient(to right, #ee4a4b, #ed4a69);
+    border-radius: 30px;
+}
+.welcome-card button a {
+    color: #fff;
+    text-decoration: none;
+}
+.welcome-img {
+    max-width: 470px;
+    width: 100%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
 
 
 /* login / register */

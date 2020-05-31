@@ -53,6 +53,12 @@
                             <p class="ml-2 text-capitalize" style="font-size: 18px;">Stats</p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            <span style="font-size: 25px;" class="mdi mdi-chat-alert-outline"></span>
+                            <p class="ml-2 text-capitalize" style="font-size: 18px;">Reminders</p>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -113,6 +119,16 @@
                             <li>
                                 <a href="#">
                                     Stats
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Reminders
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Settings
                                 </a>
                             </li>
                             <li>

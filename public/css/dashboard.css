@@ -5,6 +5,52 @@
 .navbar .navbar-nav .dropdown-toggle:after {
     display: none;
 }
+.navbar .navbar-nav .nav-item .nav-link:hover {
+    color: #003399;
+}
 .sidebar-wrapper {
     background: linear-gradient(to right, #ee4a4b, #ed4a69);
+}
+#home .card {
+    min-height: 200px;
+}
+#home button {
+    background: linear-gradient(to right, #ee4a4b, #ed4a69);
+    border-radius: 30px;
+    transition: .3s;
+    color: #fff;
+}
+#home button:hover {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    cursor: pointer;
+}
+blockquote {
+    padding: 10px 60px 10px 70px;
+    position: relative;
+}
+q {
+    color: #333;
+    display: block;
+    font-size: 18px;
+    line-height: 1.25em;
+    margin-bottom: 12px;
+    quotes: "“" "”";
+} 
+q::before {
+    color: #003399;
+    content: open-quote;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 120px;
+    font-weight: bold;
+    line-height: 120px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 90px;
+}
+q::after {
+    content: close-quote;
+}
+cite {
+    color: #999;
 }
