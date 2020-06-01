@@ -163,5 +163,7 @@
 <!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
 <script src="{{ asset('js/light-bootstrap-dashboard.js') }}" type="text/javascript"></script>
 
+<script src="{{ asset('js/dashboard.js') }}" type="text/javascript"></script>
+
 
 </html>

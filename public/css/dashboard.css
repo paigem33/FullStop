@@ -54,3 +54,40 @@ q::after {
 cite {
     color: #999;
 }
+#reminders .headline-container {
+    display: flex;
+    align-items: center;
+}
+#reminders .headline-container a {
+    background: linear-gradient(to right, #ee4a4b, #ed4a69);
+    border-radius: 30px;
+    margin-top: 5px;
+    margin-left: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    transition: .3s;
+}
+#reminders .headline-container a:hover {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    cursor: pointer;
+}
+#reminders a button.btn {
+    color: #07328f;
+    background-color: #fff;
+    border-radius: 30px;
+    border: solid 2px #07328f !important;
+    transition: .3s;
+}
+#reminders a button.btn:hover {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    cursor: pointer;
+}
+#new-reminder input, #new-reminder textarea {
+    border-radius: 30px;
+}
+#new-reminder [type=submit] {
+    background: linear-gradient(to right, #ee4a4b, #ed4a69);
+    border-radius: 30px;
+    transition: .3s;
+    color: #fff;
+}
