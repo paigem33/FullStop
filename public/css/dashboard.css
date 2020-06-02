@@ -85,9 +85,21 @@ cite {
 #new-reminder input, #new-reminder textarea {
     border-radius: 30px;
 }
+
 #new-reminder [type=submit] {
     background: linear-gradient(to right, #ee4a4b, #ed4a69);
     border-radius: 30px;
     transition: .3s;
     color: #fff;
+}
+
+#new-reminder .option-toggle:hover {
+    background-color: #003399;
+    color: #fff;
+    border-color: #003399;
+}
+#new-reminder .option-toggle.active {
+    background-color: #003399;
+    color: #fff;
+    border-color: #003399;
 }

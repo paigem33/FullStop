@@ -42,7 +42,7 @@
                 </div>
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">
+                        <a class="nav-link" href="{{route('calendar.index')}}">
                             <span style="font-size: 25px;" class="mdi mdi-calendar-month"></span>
                             <p class="ml-2 text-capitalize" style="font-size: 18px;">Calendar</p>
                         </a>

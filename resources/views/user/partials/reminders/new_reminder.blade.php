@@ -30,16 +30,16 @@
                                 <input type="text" class="form-control datepicker" id="start_date">
                             </div>
                         </div>
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons" style="width:100%;">
-                            <label class="btn" style="width:50%;">
-                                <input type="radio" name="options" id="option2" autocomplete="off"> Daily
+                        <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons" style="width:100%;">
+                            <label class="btn option-toggle active" style="width:50%; padding:10px; border-radius: 30px 0 0 30px;">
+                                <input type="radio" name="options" autocomplete="off"> One Time
                             </label>
-                            <label class="btn" style="width:50%;">
-                                <input type="radio" name="options" id="option2" autocomplete="off"> Monthly
+                            <label class="btn option-toggle" style="width:50%; padding:10px; border-radius: 0 30px 30px 0;">
+                                <input type="radio" name="options" autocomplete="off"> Monthly
                             </label>
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="form-control">
+                            <input type="submit" class="form-control btn text-uppercase">
                         </div>
                     </form>
                 </div>

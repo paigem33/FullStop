@@ -29,4 +29,5 @@ Route::get('home', function () {
 Route::group(['middleware' => 'auth'], function()
 {
     Route::resource('reminder', 'RemindersController');
+    Route::resource('calendar', 'CalendarController');
 });
