@@ -14,11 +14,18 @@
             <div class="card-body ">
                 <div class="row">
                     <div class="col-md-8">
-                    @foreach ($dates['days'] as $day)
-                        {{$day}}
-                    @endforeach
+                    <div class="row">
+                        <div class="col-1">Sun</div>
+                        <div class="col-1">Mon</div>
+                        <div class="col-1">Tue</div>
+                        <div class="col-1">Wed</div>
+                        <div class="col-1">Thu</div>
+                        <div class="col-1">Fri</div>
+                        <div class="col-1">Sat</div>
                     </div>
-                    <div class="col-md-4">yo</div>
+                    {!!$output!!}
+                    </div>
+                    <div class="col-md-4">Stats</div>
                 </div>
             </div>
         </div>

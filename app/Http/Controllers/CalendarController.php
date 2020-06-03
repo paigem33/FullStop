@@ -15,7 +15,9 @@ class CalendarController extends Controller
     {
         // do a terniary check for request dates
         $dates = dates_month();
-        return view('user.partials.calendar')->with('dates', $dates);
+        // $dates = dates_month(1, 2020);
+        $output = format_month_view($dates);
+        return view('user.partials.calendar')->with(['dates' => $dates, 'output' => $output]);
     }
 
     /**
