@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Log;
 
 class CalendarController extends Controller
 {
@@ -11,11 +12,12 @@ class CalendarController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        // do a terniary check for request dates
-        $dates = dates_month();
-        // $dates = dates_month(1, 2020);
+        $month = (isset($request['month']) ? $request['month'] : null);
+        $year = (isset($request['year']) ? $request['year'] : null);
+
+        $dates = get_date_data($month, $year);
         $output = format_month_view($dates);
         return view('user.partials.calendar')->with(['dates' => $dates, 'output' => $output]);
     }

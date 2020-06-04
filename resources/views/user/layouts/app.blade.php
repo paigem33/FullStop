@@ -20,6 +20,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>@yield('title')</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
 
@@ -162,6 +164,8 @@
 <script src="{{ asset('js/bootstrap-notify.js') }}"></script>
 <!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
 <script src="{{ asset('js/light-bootstrap-dashboard.js') }}" type="text/javascript"></script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 <script src="{{ asset('js/dashboard.js') }}" type="text/javascript"></script>
 
