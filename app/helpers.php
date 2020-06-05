@@ -22,11 +22,12 @@ function get_date_data($month = null, $year = null) {
     }
 
     $data = array();
+    $data['month_year'] = $month . ', ' . $year;
     $data['days'] = $days;
     $month = ['number' => $month, 'name' => date('F', mktime(0, 0, 0, $month, 10))];
     $data['month'] = $month;
     $data['year'] = $year;
-
+    
     return $data;
 }
 
@@ -42,25 +43,25 @@ function format_month_view($dates){
     // change out for multi columns
 
     if ($dates['days'][1]['name'] === 'Sun'){
-        $calendar .= '<div class="cal-column">' . $dates['days'][1]['date'] . '</div>';
+        $calendar .= '<div class="cal-column has-date">' . $dates['days'][1]['date'] . '</div>';
     } else if($dates['days'][1]['name'] === 'Mon'){
         $calendar .= get_calender_rows(1);
-        $calendar .= '<div class="cal-column">' . $dates['days'][1]['date'] . '</div>';
+        $calendar .= '<div class="cal-column has-date">' . $dates['days'][1]['date'] . '</div>';
     } else if ($dates['days'][1]['name'] === 'Tue'){
         $calendar .= get_calender_rows(2);
-        $calendar .= '<div class="cal-column">' . $dates['days'][1]['date'] . '</div>';
+        $calendar .= '<div class="cal-column has-date">' . $dates['days'][1]['date'] . '</div>';
     } else if ($dates['days'][1]['name'] === 'Wed'){
         $calendar .= get_calender_rows(3);
-        $calendar .= '<div class="cal-column">' . $dates['days'][1]['date'] . '</div>';
+        $calendar .= '<div class="cal-column has-date">' . $dates['days'][1]['date'] . '</div>';
     } else if ($dates['days'][1]['name'] === 'Thu'){
         $calendar .= get_calender_rows(4);
-        $calendar .= '<div class="cal-column">' . $dates['days'][1]['date'] . '</div>';
+        $calendar .= '<div class="cal-column has-date">' . $dates['days'][1]['date'] . '</div>';
     } else if ($dates['days'][1]['name'] === 'Fri'){
         $calendar .= get_calender_rows(5);
-        $calendar .= '<div class="cal-column">' . $dates['days'][1]['date'] . '</div>';
+        $calendar .= '<div class="cal-column has-date">' . $dates['days'][1]['date'] . '</div>';
     } else if ($dates['days'][1]['name'] === 'Sat'){
         $calendar .= get_calender_rows(6);
-        $calendar .= '<div class="cal-column">' . $dates['days'][1]['date'] . '</div></div>'; // closes out first row
+        $calendar .= '<div class="cal-column has-date">' . $dates['days'][1]['date'] . '</div></div><div class="cal-row">'; // closes out first row
     } 
 
     $count = 0;
@@ -70,9 +71,9 @@ function format_month_view($dates){
             continue;
         } 
         if ($day['name'] == 'Sat'){
-            $calendar .= '<div class="cal-column">' . $day['date'] . '</div></div><div class="cal-row">'; // closes out row, starts next one
+            $calendar .= '<div class="cal-column has-date">' . $day['date'] . '</div></div><div class="cal-row">'; // closes out row, starts next one
         } else {
-            $calendar .= '<div class="cal-column">' . $day['date'] . '</div>';
+            $calendar .= '<div class="cal-column has-date">' . $day['date'] . '</div>';
         }
     }
 
