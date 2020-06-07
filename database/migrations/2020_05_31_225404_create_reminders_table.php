@@ -14,12 +14,12 @@ class CreateRemindersTable extends Migration
     public function up()
     {
         Schema::create('reminders', function (Blueprint $table) {
-            $table->id();
-            $table->id('user_id');
+            $table->increments('id');
+            $table->integer('user_id');
             $table->string('name');
             $table->string('content');
-            $table->date('start_date');
-            $table->date('end_date');
+            $table->date('start_date')->nullable();
+            $table->date('end_date')->nullable();
             $table->boolean('monthly')->nullable();
             $table->boolean('daily')->nullable();
             $table->timestamps();
