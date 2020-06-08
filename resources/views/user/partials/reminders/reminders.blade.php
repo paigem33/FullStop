@@ -21,30 +21,29 @@
 
 
         @isset($reminders)
-            @foreach $reminders as $reminder 
-                {{$reminder['name']}}
-            @endforeach
-        @endisset
-
-        @isset($errors)
-            {{$errors}}
-        @endisset
-        
-    </div>
-
-@endsection
-
-<div class="container-fluid mt-4">
+            @foreach($reminders as $reminder)
+                <div class="container-fluid mt-4">
                     <div class="card " style="max-width:700px;">
                         <div class="card-header ">
-                            <h4 class="card-title">Reminder 1</h4>
+                            <h4 class="card-title">{{$reminder['name']}}</h4>
                         </div>
                         <div class="card-body ">
-                            Design is all about fucking relationships—the relationship of form and content, the relationship of elements, the relationship of designer and user. Creativity is a fucking work-ethic. Creativity is a fucking work-ethic. What’s important is the fucking drive to see a project through no matter what.
+                            {{$reminder['content']}}
                         </div>
-                        <div class="d-flex justify-content-start mb-3">
+                        <div class="d-flex justify-content-start mb-3 mt-2">
                             <a href="{{route('reminder.index')}}"><button class="btn shadow border-0 py-2 text-uppercase mr-2 ml-3" style="width: 150px;">Edit</button></a>
                             <a href="{{route('reminder.create')}}"><button class="btn shadow border-0 py-2 text-uppercase" style="width: 150px;">Remove</button></a>
                         </div>
                     </div>
                 </div>
+            @endforeach
+        @endisset
+
+        @if(count($errors) > 0 )
+            {{$errors}}
+        @endif
+        
+    </div>
+
+@endsection
+
