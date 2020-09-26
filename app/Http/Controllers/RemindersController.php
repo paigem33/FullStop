@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
 use App\Reminder;
 use Log;
+use Session;
 
 class RemindersController extends Controller
 {
@@ -18,16 +19,18 @@ class RemindersController extends Controller
      */
     public function index()
     {
-        //
-        $reminders = Reminder::where('user_id', Auth::user()->id)->get()->toArray();
-        Log::error($reminders);
-        if(empty($reminders)){
+
+        $success = session('success') ?? '';
+        
+        $reminders = Reminder::where('user_id', Auth::user()->id)->get();
+        
+        if(count($reminders) === 0){
             $errors = array();
             array_push($errors, "You don't have any reminders!");
             return view('user.partials.reminders.reminders')->with('errors', $errors);
         }
 
-        return view('user.partials.reminders.reminders')->with('reminders', $reminders);
+        return view('user.partials.reminders.reminders')->with(['reminders' => $reminders, 'success' => $success]);
     }
 
     /**
@@ -52,39 +55,22 @@ class RemindersController extends Controller
         //
         
         $validator = Validator::make($request->all(), [
-            'name' => 'required',
+            'title' => 'required',
             'content' => 'required',
         ]);
 
         if ($validator->fails()) {
             return Redirect::back()->withInput()->withErrors($validator);
         } else {
-            $daily = NULL;
-            $monthly = NULL;
-            if($request['daily']){
-                $daily = 1;
-            } else if($request['monthly']){
-                $monthly = 1;
-            }
 
-            $reminder = new Reminder;
-            $reminder->user_id = Auth::user()->id;
-            $reminder->name = $request['name'];
-            $reminder->content = $request['content'];
-            $reminder->start_date = $request['start_date'];
-            $reminder->end_date = $request['end_date'];
-            $reminder->daily = $daily;
-            $reminder->monthly = $monthly;
-            $saved = $reminder->save();
+            Reminder::create([
+                'user_id' => Auth::user()->id,
+                'title' => $request['title'],
+                'content' => $request['content'],
+            ]);
 
-            if($saved){
-                $success = 'New reminder added!';
-                return view('user.partials.reminders.reminders')->with('success',$success);
-            } else {
-                $errors = array();
-                array_push($errors, "There was an issue saving your reminder. Please try again.");
-                return Redirect::back()->with('errors',$errors);
-            }
+            return redirect()->action('RemindersController@index')->with('success', 'New reminder added!');
+        
         }
     }
 
@@ -130,6 +116,8 @@ class RemindersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Log::error('hit');
+        Reminder::where('id',$id)->delete();
+        return redirect()->action('RemindersController@index')->with('success', 'Reminder deleted!');
     }
 }

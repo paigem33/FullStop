@@ -21,9 +21,7 @@ Route::get('/', function () {
 Auth::routes();
 
 // route to view once logging in
-Route::get('home', function () {
-    return view('user/partials/home');
-})->middleware('auth');
+Route::get('/home', 'HomeController@index')->middleware('auth');
 
 
 Route::group(['middleware' => 'auth'], function()

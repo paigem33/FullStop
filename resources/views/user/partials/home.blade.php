@@ -25,11 +25,16 @@
                             <h4 class="card-title">Reminders</h4>
                         </div>
                         <div class="card-body ">
-                            <ul>
-                                <li>Must-do is a good fucking master.</li>
-                                <li>Can we all just agree.</li>
-                                <li>Someday is not a fucking day of the week.</li>
-                            </ul>
+                            @if(!empty($reminder_errors))
+                                <p>{{$reminder_errors}}</p>
+                            @endif
+                            @if(!empty($reminders))
+                                <ul>
+                                    @foreach($reminders as $reminder)
+                                        <li>{{$reminder->title}}</li>
+                                    @endforeach
+                                </ul>
+                            @endif
                             <div class="d-flex justify-content-start mb-2">
                                 <a href="{{route('reminder.index')}}"><button class="btn shadow border-0 py-2 text-uppercase mr-2" style="width: 150px;">View all</button></a>
                                 <a href="{{route('reminder.create')}}"><button class="btn shadow border-0 py-2 text-uppercase" style="width: 150px;">Add New</button></a>

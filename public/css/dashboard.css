@@ -71,14 +71,14 @@ cite {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     cursor: pointer;
 }
-#reminders a button.btn {
+#reminders button.btn {
     color: #07328f;
     background-color: #fff;
     border-radius: 30px;
     border: solid 2px #07328f !important;
     transition: .3s;
 }
-#reminders a button.btn:hover {
+#reminders button.btn:hover {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     cursor: pointer;
 }
