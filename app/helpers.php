@@ -1,7 +1,7 @@
 <?php
 
 function get_date_data($month = null, $year = null) {
-    Log::error($year . 'first');
+    
     if(!isset($year)){
         $year = date("Y");
     }

@@ -28,4 +28,5 @@ Route::group(['middleware' => 'auth'], function()
 {
     Route::resource('reminder', 'RemindersController');
     Route::resource('calendar', 'CalendarController');
+    Route::resource('stat-type', 'StatTypeController');
 });
