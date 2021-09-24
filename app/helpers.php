@@ -2,13 +2,14 @@
 
 function get_date_data($month = null, $year = null) {
     
-    if(!isset($year)){
+    if(empty($year)){
         $year = date("Y");
     }
-    if(!isset($month)){
+    if(empty($month)){
         $month = date('m');
     }
     Log::error($month);
+    Log::error($year);
     
 
     $num = cal_days_in_month(CAL_GREGORIAN, $month, $year);

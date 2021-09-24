@@ -9,7 +9,7 @@
         <div class="card ">
             <div class="card-header ">
                     <select name="date" id="date"">
-                        <option value="07, 2019">July 2019</option>
+                        <option value="{{$dates['month_year']}}">{{date('m-Y', strtotime($dates['month_year']))}}</option>
                         <option {{ ($dates['month_year'] == "08, 2019" ? 'selected' : '') }} value="08, 2019">August 2019</option>
                         <option {{ ($dates['month_year'] == "09, 2019" ? 'selected' : '') }} value="09, 2019">September 2019</option>
                         <option {{ ($dates['month_year'] == "10, 2019" ? 'selected' : '') }} value="10, 2019">October 2019</option>

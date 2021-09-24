@@ -14,6 +14,14 @@ class CalendarController extends Controller
      */
     public function index(Request $request)
     {
+
+        // get the date the user signed up, use that for starting month in the drop down 
+        // build array of each month between today and the first month they signed up 
+        // for each day, query for stats and if there is one, add it to the array with the correct color/icon
+        // pass info to format month view function to output the selected/current months info 
+        // in the view, the month dropdown should be populated with a loop, checking for the selected month
+        // on the calender, the days should be clickable and open a sweet alert to add a new stat
+        // stats should be clickable, and open a sweet alert to edit the stat or delete it 
         $month = (isset($request['month']) ? $request['month'] : null);
         $year = (isset($request['year']) ? $request['year'] : null);
 
